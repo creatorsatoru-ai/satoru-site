@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メニュー | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #555; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 80px 40px 80px; }
+    .page-hero h1 { font-size: 44px; line-height: 1.55; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 52px 0 48px; }
+    .section + .section { padding-top: 0; }
+
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+
+    h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; margin-top: 32px; }
+    h3:first-child { margin-top: 0; }
+    p { margin-bottom: 12px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; }
+
+    .item-list { margin-top: 8px; }
+    .item-list li { font-size: 14px; color: #555; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .item-list li:first-child { border-top: 1px solid #f0f0f0; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media print {
+      header { position: static; }
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 64px 20px 64px; }
+      .page-hero h1 { font-size: 32px; }
+      .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html" class="active">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>MENU</h1>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">個人向けサポート</p>
+
+        <h3>ウェルスダイナミクスセッション</h3>
+        <p>現在地や特性を整理し、何を伸ばし、何を手放すべきかを明確にする個別セッション。</p>
+        <ul class="item-list">
+          <li>方向性の整理</li>
+          <li>課題の特定</li>
+          <li>人間関係・環境の整理</li>
+          <li>収入構造の整理</li>
+          <li>自分の強みや方向性の整理</li>
+          <li>事業の進め方の見直し</li>
+        </ul>
+        <p style="margin-top:12px;font-size:13px;color:#888;"><a href="wealth.html">詳細・料金はウェルスダイナミクスページへ</a></p>
+
+        <h3>ウェルス集中講座（1DAY）</h3>
+        <p>ウェルスダイナミクスを理解だけで終わらせず、実践レベルまで落とし込む1日講座。</p>
+        <p style="font-size:13px;color:#888;"><a href="seminar.html">日程・詳細はセミナーページへ</a></p>
+
+        <h3>伴走型ビジネス構築サポート</h3>
+        <p>経験・価値観・強みを整理して、自分に合った収益構造を設計します。個人で収入を作りたい方向け。</p>
+        <ul class="item-list">
+          <li>商品設計</li>
+          <li>導線設計（LINEなど）</li>
+          <li>集客動線設計</li>
+          <li>継続収益化設計</li>
+          <li>定期的な整理と見直し</li>
+          <li>事業・組織の変化への対応</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">法人向けサポート</p>
+
+        <h3>法人研修・組織設計</h3>
+        <p>社員の特性理解と役割設計を通じて、組織機能を強化します。</p>
+        <ul class="item-list">
+          <li>特性理解</li>
+          <li>役割最適化</li>
+          <li>チーム関係の改善</li>
+          <li>コミュニケーション改善</li>
+          <li>適材適所の配置</li>
+        </ul>
+
+        <h3>講演・セミナー</h3>
+        <p>ウェルスダイナミクスをベースにした講演・セミナーを実施します。組織向け・一般向けどちらにも対応します。</p>
+        <ul class="item-list">
+          <li>強みの見つけ方</li>
+          <li>スペクトル考察</li>
+          <li>働き方設計</li>
+          <li>チームビルディング</li>
+          <li>組織コミュニケーション</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>

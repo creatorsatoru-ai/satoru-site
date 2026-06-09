@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #555; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 80px 40px 80px; }
+    .page-hero h1 { font-size: 44px; line-height: 1.55; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+
+    .profile { padding: 56px 0 80px; }
+
+    /* Photo */
+    .profile-photo { max-width: 320px; margin: 0 auto 52px; }
+    .profile-photo img { width: 100%; display: block; }
+
+    /* Bio */
+    .bio p { font-size: 17px; line-height: 1.9; margin-bottom: 0; }
+
+    /* Certifications */
+    .cert-section { margin-top: 32px; }
+    .cert-heading { font-size: 17px; color: #444; margin-bottom: 8px; }
+    .cert-list { list-style: none; }
+    .cert-list li { font-size: 17px; color: #444; padding: 1px 0; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media print {
+      header { position: static; }
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 64px 20px 64px; }
+      .page-hero h1 { font-size: 32px; }
+      .profile-photo { max-width: 100%; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html" class="active">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>SATORU<br>KOBAYASHI</h1>
+    </div>
+  </div>
+
+  <main>
+    <div class="profile">
+      <div class="wrap">
+
+        <div class="profile-photo">
+          <img src="images/satoru.jpg" alt="小林悟">
+        </div>
+
+        <div class="bio">
+          <p>1974年 新潟県上越市生まれ。</p>
+          <p>18歳でトラック運転手として社会に出る。</p>
+          <p>その後、三菱商事グループで営業、営業所長、本社営業企画、事業計画策定、営業戦略立案、新規事業開発責任者を経験し、22年間勤務。</p>
+          <p>40歳で独立。スタートアップコミュニティの立上げ、起業塾の運営、資産形成支援、経営コンサルティングなどを通じて、人が豊かになるための仕組みを考え、作り、提供している。生きるテーマは、ゆるく、たのしく、かっこよく。自分が楽しいと思えることを、無理なく追求しながら生きている。</p>
+          <p style="margin-top: 22px;">夢は、SCANIAの大型キャンピングカーで旅に出ること。</p>
+          <p>今でも、トラックの運転手に戻りたいと内心思っている。</p>
+        </div>
+
+        <div class="cert-section">
+          <p class="cert-heading">保有資格</p>
+          <ul class="cert-list">
+            <li>大型自動車免許</li>
+            <li>牽引免許（トレーラー）</li>
+            <li>大型特殊免許</li>
+            <li>自動二輪免許</li>
+            <li>車両系建設機械</li>
+            <li>車両系建設機械（解体用）</li>
+            <li>不整地運搬車</li>
+            <li>高所作業車</li>
+            <li>フォークリフト</li>
+            <li>玉掛</li>
+            <li>移動式クレーン</li>
+            <li>心理カウンセラー</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>

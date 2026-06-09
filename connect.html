@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINE相談 | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #555; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 90px 40px 70px; }
+    .page-hero .page-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; display: block; }
+    .page-hero h1 { font-size: 28px; line-height: 1.5; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .section { padding-bottom: 48px; }
+
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+
+    h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    .contact-block { border: 1px solid #e5e5e5; padding: 28px; margin-bottom: 20px; }
+    .contact-tag { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #999; margin-bottom: 8px; display: block; }
+    .contact-name { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    .contact-desc { font-size: 14px; color: #555; line-height: 1.9; margin-bottom: 20px; }
+
+    .faq-list { border-top: 1px solid #e5e5e5; }
+    .faq-list li { padding: 12px 0; border-bottom: 1px solid #e5e5e5; font-size: 14px; }
+
+    .btn { display: inline-block; border: 2px solid #111; padding: 12px 28px; font-size: 14px; font-weight: 700; transition: background 0.15s, color 0.15s; }
+    .btn:hover { background: #111; color: #fff; text-decoration: none; }
+    .btn-line { background: #06C755; border-color: #06C755; color: #fff; }
+    .btn-line:hover { background: #05b34d; border-color: #05b34d; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 74px 20px 56px; }
+      .page-hero h1 { font-size: 22px; }
+      .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="page-label">Contact</p>
+      <h1>まず「相談」と一言送るだけで大丈夫です</h1>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">連絡方法</p>
+        <p>LINEにて無料でご相談を受け付けています。内容がまとまっていなくても問題ありません。現在の状況に合わせて最適な進め方をご案内します。</p>
+
+        <div class="contact-block" style="margin-top:20px;">
+          <span class="contact-tag">LINE — おすすめ</span>
+          <p class="contact-name">LINEで無料相談してみる</p>
+          <p class="contact-desc">
+            「セッション希望」または「ちょっと相談です」と送っていただければ、現在の状況に合わせてご案内します。<br>
+            セミナーの案内、最新情報などもLINEよりお届けしています。<br>
+            まず「読みました」の一言でも大歓迎です。
+          </p>
+          <a href="#" class="btn btn-line">LINE を追加する</a>
+        </div>
+
+        <div class="contact-block">
+          <span class="contact-tag">Mail</span>
+          <p class="contact-name">メールで連絡する</p>
+          <p class="contact-desc">法人のご担当者、取材・講演依頼など、ご用件のある方はメールでどうぞ。</p>
+          <a href="mailto:creator.satoru@gmail.com" class="btn">メールを送る（creator.satoru@gmail.com）</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">よくあるご相談</p>
+        <ul class="faq-list">
+          <li>どのセッションが自分に合っているか分からない</li>
+          <li>セミナーに参加したいが日程が合わない</li>
+          <li>法人でウェルスダイナミクスを導入したい</li>
+          <li>まず話を聞いてみたい</li>
+        </ul>
+        <p style="margin-top:16px;font-size:13px;color:#777;">どんな内容でも、まずはLINEでお気軽に。</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>

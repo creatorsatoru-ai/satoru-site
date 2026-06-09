@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>セミナー日程 | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #555; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 90px 40px 70px; }
+    .page-hero .page-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; display: block; }
+    .page-hero h1 { font-size: 28px; line-height: 1.5; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .section { padding-bottom: 48px; }
+
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+
+    h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; margin-top: 20px; }
+    h3:first-child { margin-top: 0; }
+    p { margin-bottom: 14px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; }
+
+    .check-list { border-top: 1px solid #e5e5e5; }
+    .check-list li { padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-size: 14px; padding-left: 16px; position: relative; }
+    .check-list li::before { content: "・"; position: absolute; left: 0; color: #999; }
+
+    .seminar-block { border: 1px solid #e5e5e5; margin-bottom: 28px; }
+    .seminar-head { background: #f8f8f8; padding: 18px 24px; border-bottom: 1px solid #e5e5e5; }
+    .seminar-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .seminar-sub { font-size: 13px; color: #666; margin-bottom: 0; }
+    .seminar-body { padding: 24px; }
+
+    .spec-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .spec-table tr { border-bottom: 1px solid #e5e5e5; }
+    .spec-table th { text-align: left; font-size: 12px; color: #888; font-weight: 400; padding: 10px 12px; width: 72px; background: #fafafa; }
+    .spec-table td { font-size: 14px; padding: 10px 12px; }
+
+    .for-block { border: 1px solid #e5e5e5; background: #fafafa; padding: 16px 20px; margin: 16px 0; }
+    .for-title { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #999; margin-bottom: 10px; }
+
+    .btn { display: inline-block; border: 2px solid #111; padding: 12px 28px; font-size: 14px; font-weight: 700; transition: background 0.15s, color 0.15s; }
+    .btn:hover { background: #111; color: #fff; text-decoration: none; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 74px 20px 56px; }
+      .page-hero h1 { font-size: 22px; }
+      .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html" class="active">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="page-label">Seminar</p>
+      <h1>セミナー日程</h1>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">現在受付中</p>
+        <p>現在受付中のセミナーをご案内しています。ご自身に合った内容・日程からお選びください。どのセミナーが良いか迷う場合は、LINEからお気軽にご相談ください。</p>
+
+        <div class="seminar-block" style="margin-top:24px;">
+          <div class="seminar-head">
+            <p class="seminar-name">ウェルス1DAY集中講座</p>
+            <p class="seminar-sub">成果がでるやり方を見つける1日</p>
+          </div>
+          <div class="seminar-body">
+            <p>自分の強みや方向性を整理し、これからの動き方を明確にしたい方向けの講座です。ウェルスダイナミクスを理解だけで終わらせず、実践レベルまで落とし込むことを目指します。</p>
+            <h3>学習の4つの視点</h3>
+            <ul class="check-list">
+              <li>才能を発見する（ダイナミクス）</li>
+              <li>価値を育てる（フィットネス）</li>
+              <li>成長段階を理解する（スペクトル）</li>
+              <li>人間関係を構築する（ネットワーク）</li>
+            </ul>
+            <div class="for-block" style="margin-top:20px;">
+              <p class="for-title">こんな方に</p>
+              <ul class="check-list" style="border:none;">
+                <li style="border-top:none;">強みを活かして仕事をしたい方</li>
+                <li>組織での活躍を目指す方</li>
+                <li>起業・副業で成果を求める方</li>
+                <li>自分に合ったやり方を知りたい方</li>
+                <li>人間関係の改善を目指す方</li>
+              </ul>
+            </div>
+            <table class="spec-table">
+              <tr><th>開催日</th><td>6月6日 / 7月11日 / 8月1日</td></tr>
+              <tr><th>時間</th><td>10:00〜18:30（休憩含む）</td></tr>
+              <tr><th>形式</th><td>オンライン（Zoom）</td></tr>
+              <tr><th>定員</th><td>少人数制（定員になり次第受付終了）</td></tr>
+              <tr><th>料金</th><td>一般：33,000円（税込）　会員：30,000円（税込）</td></tr>
+            </table>
+            <p style="font-size:13px;color:#777;margin-bottom:16px;">再受講者・小林の有料セッション受講者向け特別価格あり</p>
+            <a href="connect.html" class="btn">日程確認・申込（LINE）</a>
+          </div>
+        </div>
+
+        <div class="seminar-block">
+          <div class="seminar-head">
+            <p class="seminar-name">現実を変えるための3つの条件</p>
+          </div>
+          <div class="seminar-body">
+            <p>「頑張っているのに現実が変わらない」という状態には、必ず理由があります。正しいポイントを押さえることで現実は変えていくことができます。ウェルスダイナミクスに基づき、成功の設計図をシンプルに解説するセミナーです。</p>
+            <div class="for-block">
+              <p class="for-title">こんな方に</p>
+              <ul class="check-list" style="border:none;">
+                <li style="border-top:none;">頑張っても現実が変わらないと感じる方</li>
+                <li>方向性が定まらず迷っている方</li>
+                <li>何か違うという感覚はあるが言語化できない方</li>
+                <li>次のステージへ進みたい方</li>
+              </ul>
+            </div>
+            <table class="spec-table">
+              <tr><th>形式</th><td>オンライン（詳細はLINEにてご案内）</td></tr>
+              <tr><th>日程</th><td>随時開催 → LINEよりご確認ください</td></tr>
+            </table>
+            <a href="connect.html" class="btn">詳細・申込（LINE）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">過去の開催</p>
+        <p>ウェルスダイナミクス勉強会、LifeFlow入門セミナー、資産形成の考え方講座 など。</p>
+        <p>過去の内容について詳しく知りたい方は、LINEからお気軽にお尋ねください。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">お問い合わせ</p>
+        <p>次回の開催情報はLINEでお知らせしています。「まず話を聞いてみたい」という方も大歓迎です。「相談」と一言送るだけで大丈夫です。</p>
+        <p style="margin-top:20px;"><a href="connect.html" class="btn">LINEで相談・申込</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>

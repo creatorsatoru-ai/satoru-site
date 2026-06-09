@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ウェルスダイナミクス | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a { font-size: 13px; color: #555; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 90px 40px 70px; }
+    .page-hero .page-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; display: block; }
+    .page-hero h1 { font-size: 28px; line-height: 1.5; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .section { padding-bottom: 48px; }
+
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+
+    h2 { font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 12px; }
+    h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; margin-top: 24px; }
+    h3:first-child { margin-top: 0; }
+    p { margin-bottom: 14px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; }
+
+    .check-list { border-top: 1px solid #e5e5e5; }
+    .check-list li { padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-size: 14px; padding-left: 16px; position: relative; }
+    .check-list li::before { content: "・"; position: absolute; left: 0; color: #999; }
+
+    .dynamics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e5e5e5; border: 1px solid #e5e5e5; margin: 20px 0; }
+    .dynamics-item { background: #fff; padding: 20px; }
+    .dynamics-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .dynamics-desc { font-size: 13px; color: #555; }
+
+    .service-block { border: 1px solid #e5e5e5; margin: 20px 0; }
+    .service-head { background: #f8f8f8; padding: 14px 20px; border-bottom: 1px solid #e5e5e5; }
+    .service-head h3 { margin: 0; }
+    .service-body { padding: 20px; }
+    .spec-row { display: flex; gap: 20px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { min-width: 60px; color: #888; font-size: 12px; padding-top: 2px; }
+
+    .voice-item { padding: 20px 0; border-bottom: 1px solid #e5e5e5; }
+    .voice-item:first-child { border-top: 1px solid #e5e5e5; }
+    .voice-text { font-size: 14px; line-height: 1.9; margin-bottom: 8px; }
+    .voice-attr { font-size: 12px; color: #888; }
+
+    .faq-item { padding: 20px 0; border-bottom: 1px solid #e5e5e5; }
+    .faq-item:first-child { border-top: 1px solid #e5e5e5; }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.8; }
+
+    .btn { display: inline-block; border: 2px solid #111; padding: 12px 28px; font-size: 14px; font-weight: 700; transition: background 0.15s, color 0.15s; }
+    .btn:hover { background: #111; color: #fff; text-decoration: none; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 74px 20px 56px; }
+      .page-hero h1 { font-size: 22px; }
+      .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
+      .dynamics-grid { grid-template-columns: 1fr; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html" class="active">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="page-label">Wealth Dynamics</p>
+      <h1>才能を活かしてフローに乗る</h1>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">こんな方に</p>
+        <ul class="check-list">
+          <li>自分の強みを活かした働き方を知りたい</li>
+          <li>今の方向性が合っているか確認したい</li>
+          <li>ビジネスやキャリアを加速させたい</li>
+          <li>社員の強みを活かした組織づくりをしたい</li>
+          <li>チームがうまく機能していないと感じている</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">ウェルスダイナミクスとは</p>
+        <p>ロジャー・ハミルトンによって開発された「才能を成果につなげるためのフレームワーク」です。単なる性格診断ではなく、どこで価値を発揮するのか、どの役割で機能するのか、どう動くと成果につながるのかを整理するための考え方です。</p>
+        <h3>なぜこの理論が必要か</h3>
+        <p>同じように努力しているのに、結果が出る人と出ない人がいます。この差は能力ではなく、「自分に合った動き方をしているかどうか」で生まれます。</p>
+        <p>人にはそれぞれ、アイデアから動くタイプ、人との関係から広げるタイプ、コツコツ積み上げるタイプ、分析して整えるタイプといった違いがあります。この違いを無視して動くと、頑張っているのに結果につながらない状態になります。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">4つの特性（ダイナミクス）</p>
+        <div class="dynamics-grid">
+          <div class="dynamics-item"><p class="dynamics-name">ダイナモ（創る）</p><p class="dynamics-desc">新しいアイデアを生み出す役割</p></div>
+          <div class="dynamics-item"><p class="dynamics-name">ブレイズ（つなぐ）</p><p class="dynamics-desc">人と関わりながら広げていく役割</p></div>
+          <div class="dynamics-item"><p class="dynamics-name">テンポ（支える）</p><p class="dynamics-desc">現場で安定して実行していく役割</p></div>
+          <div class="dynamics-item"><p class="dynamics-name">スチール（整える）</p><p class="dynamics-desc">仕組みを作り効率化していく役割</p></div>
+        </div>
+        <p style="font-size:13px;color:#777;">流れ：ダイナモ（創造）→ ブレイズ（拡散）→ テンポ（安定）→ スチール（構造化）</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">スペクトルという考え方</p>
+        <h2>タイプ（方向）とスペクトル（現在地）</h2>
+        <p>「今どの段階（レベル）にいるのか」という視点を重視しています。同じ特性でも段階によって取るべき行動は変わります。</p>
+        <p>多くの人がタイプの理解で終わってしまい、実践には至りません。タイプだけでなく「今どの位置にいるか」を知ることが重要です。</p>
+        <p><strong>特性は「方向」、スペクトルは「現在地」を示します。</strong>この2つを組み合わせることで、やるべきことが明確になります。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">活用できる場面</p>
+        <h3>起業・個人事業</h3>
+        <ul class="check-list" style="margin-bottom:8px;">
+          <li>自分に合ったビジネスの進め方が分かる</li>
+          <li>無理な営業や集客から抜けられる</li>
+          <li>強みを活かした収益の作り方が見える</li>
+        </ul>
+        <p style="font-size:13px;color:#777;margin-bottom:24px;">→「頑張る方向」が明確になる</p>
+        <h3>社員研修・人材育成</h3>
+        <ul class="check-list" style="margin-bottom:8px;">
+          <li>適材適所の配置ができる</li>
+          <li>個人の強みを活かした役割設計ができる</li>
+          <li>チーム内のミスマッチやストレスが減る</li>
+        </ul>
+        <p style="font-size:13px;color:#777;margin-bottom:24px;">→「組織全体の生産性」が上がる</p>
+        <h3>法人の成長・組織構築</h3>
+        <ul class="check-list" style="margin-bottom:8px;">
+          <li>経営者の強みを軸に戦略が組める</li>
+          <li>役割分担が明確になり、無駄が減る</li>
+          <li>チームとしての機能が最大化される</li>
+        </ul>
+        <p style="font-size:13px;color:#777;">→「個人の力」から「組織の力」へ変わる</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">サービス内容と料金</p>
+        <div class="service-block">
+          <div class="service-head"><h3>1. プロファイル・スペクトルセッション</h3></div>
+          <div class="service-body">
+            <p style="margin-bottom:10px;">内容：</p>
+            <ul class="check-list" style="margin-bottom:16px;">
+              <li>プロファイルテスト</li>
+              <li>スペクトルテスト</li>
+              <li>強みと現在地の整理</li>
+              <li>ズレているポイントの確認</li>
+              <li>今やるべき行動の整理</li>
+            </ul>
+            <div class="spec-row"><span class="spec-key">形式</span><span>Zoom</span></div>
+            <div class="spec-row"><span class="spec-key">時間</span><span>120分</span></div>
+            <div class="spec-row"><span class="spec-key">料金</span><span>一般：55,000円（税込）　会員：30,000円（税込）</span></div>
+          </div>
+        </div>
+        <div class="service-block">
+          <div class="service-head"><h3>2. 収益構造設計セッション（受講者限定）</h3></div>
+          <div class="service-body">
+            <p>ウェルスダイナミクスセッション受講後、より具体的に進めたい方向け。</p>
+            <p>内容：強みを活かした働き方 / 収入の柱の整理 / 紹介導線 / 仕組み化 / レバレッジ設計</p>
+            <p style="font-size:13px;color:#777;">※必要と感じた方のみご案内</p>
+          </div>
+        </div>
+        <div class="service-block">
+          <div class="service-head"><h3>3. ウェルス集中講座（1DAY）</h3></div>
+          <div class="service-body">
+            <p>ウェルスダイナミクスを理解だけで終わらせず、実践レベルまで落とし込みたい方向け。</p>
+            <p style="margin-bottom:10px;">内容：タイプ理解 / スペクトル戦略 / 行動設計 / 習慣化</p>
+            <div class="spec-row"><span class="spec-key">形式</span><span>Zoom</span></div>
+            <div class="spec-row"><span class="spec-key">時間</span><span>10:00〜18:30</span></div>
+            <div class="spec-row"><span class="spec-key">料金</span><span>一般：33,000円（税込）　会員：30,000円（税込）</span></div>
+            <p style="margin-top:12px;"><a href="seminar.html">→ 日程・詳細はセミナーページへ</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">講師プロフィール</p>
+        <h2>小林 悟（こばやし さとる）</h2>
+        <ul class="check-list">
+          <li>一般社団法人日本適性力学協会 認定アンバサダー</li>
+          <li>日本で最も多くのウェルスダイナミクス講師を育成してきた実績</li>
+          <li>10年以上にわたる実践と指導</li>
+          <li>企業研修から個人まで幅広い事例</li>
+          <li>国内最多クラスの有資格者育成実績</li>
+        </ul>
+        <p style="margin-top:16px;">私の役割は、あなたを分類することではなく、今のあなたにとってどこで力を使うべきかを一緒に整理することです。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">受講者の声</p>
+        <h3 style="margin-top:0;margin-bottom:12px;">セッション受講者</h3>
+        <div class="voice-item">
+          <p class="voice-text">「頑張っているのに結果が出ない状態が続いていました。セッションを受けて、自分のタイプと今のレベルが明確になり、『なぜうまくいかなかったのか』が腑に落ちました。今はやるべきことがはっきりし、迷いなく動けるようになっています。」</p>
+          <p class="voice-attr">会社員</p>
+        </div>
+        <div class="voice-item">
+          <p class="voice-text">「いろいろ学んできましたが、結局どう動けばいいのか分からず止まっていました。セッションでズレているポイントが明確になり、自分に合った進め方が分かりました。もっと早く受けておけばよかったと思っています。」</p>
+          <p class="voice-attr">経営者</p>
+        </div>
+        <div class="voice-item">
+          <p class="voice-text">「正直、何をやっても噛み合わない感覚がありました。セッションを受けて、原因が自分のやり方のズレにあると分かり、すごく納得できました。」</p>
+          <p class="voice-attr">個人事業</p>
+        </div>
+        <h3 style="margin-top:28px;margin-bottom:12px;">集中講座受講者</h3>
+        <div class="voice-item">
+          <p class="voice-text">「ウェルスダイナミクスは知っていましたが、実際にどう使えばいいのか分かっていませんでした。講座を受けて、考え方だけでなく具体的な動き方まで整理でき、実践できる状態になりました。」</p>
+          <p class="voice-attr">個人事業</p>
+        </div>
+        <div class="voice-item">
+          <p class="voice-text">「自己理解はしているつもりでしたが、うまく活かせていませんでした。講座を通して、自分の強みの使い方とタイミングが分かり、自然と結果につながる感覚が出てきました。」</p>
+          <p class="voice-attr">経営者</p>
+        </div>
+        <div class="voice-item">
+          <p class="voice-text">「これまでウェルスダイナミクスは何人かの方から学んできましたが、正直あまり現実は変わりませんでした。今回、小林さんの講座を受けて、初めて『どう使えばいいのか』が腑に落ちました。同じ内容のはずなのに、ここまで理解と行動につながったのは初めてです。」</p>
+          <p class="voice-attr">経営者（1DAY講座）</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">よくある質問</p>
+        <div class="faq-item">
+          <p class="faq-q">Q. テストだけ受けることはできますか？</p>
+          <p class="faq-a">テストのみの提供は行っていません。対話まで含めて整理することを前提としています。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Q. どのくらい準備が必要ですか？</p>
+          <p class="faq-a">特別な準備は不要です。現在の状況をそのままお話しください。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Q. 経営者でなくても受けられますか？</p>
+          <p class="faq-a">可能です。ただし本気で整理したい方に限らせていただいています。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Q. どのような方には向いていませんか？</p>
+          <p class="faq-a">答えだけを求めている方、短期的な成功ノウハウを求めている方には向いていません。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">お問い合わせ</p>
+        <p>「セッション希望」または「ちょっと相談です」と送るだけで大丈夫です。内容がまとまっていなくても問題ありません。現在の状況に合わせて最適な進め方をご案内します。</p>
+        <p style="margin-top:20px;"><a href="connect.html" class="btn">LINEで相談する</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>
