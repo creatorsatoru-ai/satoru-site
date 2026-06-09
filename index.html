@@ -35,15 +35,19 @@
     footer nav a:hover { color: #fff; text-decoration: none; }
     .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
 
+    .closing-mob { display: none; }
+
     @media (max-width: 700px) {
       header { padding: 16px 20px; }
       nav { gap: 16px; }
       .wrap { padding: 0 20px; }
       .cover-hero { padding: 74px 20px 56px; }
-      .catch-line { font-size: 30px; }
+      .catch-line { font-size: 26px; }
       .intro { padding: 52px 0 96px; }
       .intro-text p { font-size: 18px; margin-bottom: 26px; }
       footer { padding: 28px 20px; }
+      .closing-pc { display: none; }
+      .closing-mob { display: block; }
     }
   </style>
 </head>
@@ -74,7 +78,8 @@
         <p>お金があれば豊かになれる、<br>とも思っていません。</p>
         <p>私が見ているのは、<br>その人が自分らしい流れの中にいるかどうかです。</p>
       </div>
-      <p class="closing">人が豊かになるための仕組みを、<br>考えたり、作ったり、提供しています。</p>
+      <p class="closing closing-pc">人が豊かになるための仕組みを、<br>考えたり、作ったり、提供しています。</p>
+      <p class="closing closing-mob">人が豊かになるための仕組みを<br>考えたり、作ったり<br>提供しています</p>
     </div>
   </div>
 
