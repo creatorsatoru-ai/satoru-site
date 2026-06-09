@@ -29,15 +29,20 @@
 
     .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
 
-    h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; margin-top: 32px; }
+    h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; margin-top: 32px; }
     h3:first-child { margin-top: 0; }
-    p { margin-bottom: 12px; font-size: 15px; }
+    p { margin-bottom: 12px; font-size: 17px; }
     p:last-child { margin-bottom: 0; }
     ul { list-style: none; }
 
     .item-list { margin-top: 8px; }
-    .item-list li { font-size: 14px; color: #555; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+    .item-list li { font-size: 16px; color: #555; padding: 6px 0 6px 1.2em; border-bottom: 1px solid #f0f0f0; position: relative; }
     .item-list li:first-child { border-top: 1px solid #f0f0f0; }
+    .item-list li::before { content: "・"; position: absolute; left: 0; color: #777; }
+
+    .contact-note { padding: 40px 0 64px; border-top: 1px solid #e5e5e5; }
+    .contact-note p { font-size: 15px; color: #666; margin-bottom: 8px; }
+    .contact-note .line-link { color: #06C755; text-decoration: underline; font-size: 15px; }
 
     footer { background: #111; color: #fff; padding: 36px 40px; }
     footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
@@ -138,6 +143,14 @@
           <li>チームビルディング</li>
           <li>組織コミュニケーション</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="contact-note">
+      <div class="wrap">
+        <p>どのメニューが自分に合うかわからない場合は、まずはLINEでお気軽にご相談ください。</p>
+        <p>「相談」と送っていただければ大丈夫です。</p>
+        <p style="margin-top:16px;"><a href="connect.html" class="line-link">LINEで相談する</a></p>
       </div>
     </div>
 
