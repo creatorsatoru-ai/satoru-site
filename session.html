@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>セッションの流れ | 小林悟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Kosugi Maru', sans-serif; line-height: 1.85; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { border-bottom: 2px solid #111; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .site-name { font-weight: 700; font-size: 15px; line-height: 1; }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+    nav a { font-size: 13px; color: #555; line-height: 1; }
+    nav a:hover, nav a.active { color: #111; text-decoration: underline; }
+
+    .page-hero { background: #0B1D35; color: #fff; padding: 80px 40px 80px; }
+    .page-hero h1 { font-size: 44px; line-height: 1.55; color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .section { padding: 52px 0 48px; }
+    .section + .section { padding-top: 0; }
+
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; }
+
+    p { margin-bottom: 16px; font-size: 17px; }
+    p:last-child { margin-bottom: 0; }
+    ul { list-style: none; }
+
+    .session-meta { display: flex; gap: 40px; margin: 20px 0 4px; }
+    .session-meta-item { font-size: 15px; }
+    .session-meta-label { font-size: 12px; color: #999; display: block; margin-bottom: 3px; }
+
+    .flow-list { border-top: 1px solid #e5e5e5; margin: 4px 0; }
+    .flow-item { display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid #e5e5e5; }
+    .flow-num { font-size: 15px; color: #999; flex-shrink: 0; width: 20px; }
+    .flow-name { font-size: 17px; font-weight: 700; }
+    .flow-sub { font-size: 14px; color: #666; margin-left: 4px; }
+
+    .test-list { margin: 12px 0; }
+    .test-list li { font-size: 16px; color: #555; padding: 7px 0 7px 1.2em; border-bottom: 1px solid #f0f0f0; position: relative; }
+    .test-list li:first-child { border-top: 1px solid #f0f0f0; }
+    .test-list li::before { content: "・"; position: absolute; left: 0; color: #777; }
+
+    .note-list { border-top: 1px solid #e5e5e5; margin: 20px 0; }
+    .note-item { padding: 20px 0; border-bottom: 1px solid #e5e5e5; }
+    .note-head { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .note-body { font-size: 16px; color: #444; margin: 0; line-height: 1.85; }
+
+    .contact-note { padding: 40px 0 64px; border-top: 1px solid #e5e5e5; }
+    .contact-note p { font-size: 17px; color: #444; margin-bottom: 12px; text-align: center; }
+    .contact-note .line-cta { text-align: center; margin-top: 24px; }
+    .contact-note .line-link { color: #06C755; text-decoration: underline; font-size: 17px; }
+
+    footer { background: #111; color: #fff; padding: 36px 40px; }
+    footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.6); }
+    footer nav a:hover { color: #fff; text-decoration: none; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
+
+    @media print {
+      header { position: static; }
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 16px 20px; }
+      nav { gap: 16px; }
+      .wrap { padding: 0 20px; }
+      .page-hero { padding: 64px 20px 64px; }
+      .page-hero h1 { font-size: 32px; }
+      .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
+      .session-meta { flex-direction: column; gap: 12px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">SATORU KOBAYASHI</a>
+    <nav>
+      <a href="index.html">Top</a>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="https://note.com/satoooru" target="_blank">Column</a>
+      <a href="connect.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <h1>SESSION<br>FLOW</h1>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">必ずお読みください</p>
+        <p>本セッションは、結果をお伝えするだけの時間ではありません。ウェルスダイナミクスの結果をもとに、ご自身の現状や方向性を整理し、具体的な行動に落とし込んでいく時間です。</p>
+        <p>受け身ではなく、ご自身の状況や考えを整理したうえでご参加いただくことで、より有意義な時間となります。どんなことでも構いませんので、気になる点は遠慮なくお持ちください。</p>
+        <div class="session-meta">
+          <div class="session-meta-item">
+            <span class="session-meta-label">セッション時間</span>
+            90分
+          </div>
+          <div class="session-meta-item">
+            <span class="session-meta-label">セッション方法</span>
+            Zoom
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">全体の流れ</p>
+        <div class="flow-list">
+          <div class="flow-item">
+            <span class="flow-num">①</span>
+            <div><span class="flow-name">ご入金確認</span></div>
+          </div>
+          <div class="flow-item">
+            <span class="flow-num">②</span>
+            <div><span class="flow-name">有料テスト受験</span><span class="flow-sub">（約30分）</span></div>
+          </div>
+          <div class="flow-item">
+            <span class="flow-num">③</span>
+            <div><span class="flow-name">レポート確認・事前準備</span></div>
+          </div>
+          <div class="flow-item">
+            <span class="flow-num">④</span>
+            <div><span class="flow-name">セッション当日</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">① ご入金確認</p>
+        <p>お申し込み後、2日以内にお支払いをお願いいたします。ご入金の確認をもって、予約確定となります。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">② 有料テスト受験</p>
+        <p>ご入金確認後、LINEにて以下のテストをお送りします。</p>
+        <ul class="test-list">
+          <li>プロファイルテスト</li>
+          <li>スペクトルテスト</li>
+        </ul>
+        <p style="margin-top:16px;">合計で約30分程度です。通信環境が安定した場所で、落ち着いて受験できる環境にて、セッション前日までに受験をお願いいたします。</p>
+        <p>途中中断や通信不良があると、正確な結果が出ない可能性がありますのでご注意ください。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">③ レポート確認・事前準備</p>
+        <p>受験後に届くレポートは、必ず事前にご確認ください。すべてを理解する必要はありませんが、全体に目を通しておくことで、セッションの質が大きく変わります。</p>
+        <p>特に「違和感がある部分」や「気になる箇所」があれば、そのままにしておいてください。セッション内で整理していきます。</p>
+        <p>また、セッションで聞きたい内容やご質問があれば、事前にまとめておくことをおすすめします。</p>
+        <p>あわせて、セッション前のヒアリングフォームもお送りしますので、必要事項をご記入のうえご返信ください。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">有料テスト受験前の注意事項</p>
+        <p>ウェルスダイナミクスのテストは、「能力」ではなく「自然な傾向（本来の強み）」を知るためのものです。正確な結果を得るために、以下の点にご注意ください。</p>
+        <div class="note-list">
+          <div class="note-item">
+            <p class="note-head">1.「できること」ではなく、「自然にやっていること」で答える</p>
+            <p class="note-body">仕事や経験で身につけたスキルではなく、無意識でもやってしまう行動を基準に選んでください。</p>
+          </div>
+          <div class="note-item">
+            <p class="note-head">2. 過去の体験ではなく「本来の自分」で答える</p>
+            <p class="note-body">これまでの成果や実績ではなく、制約がなかった場合にどのように動くかをイメージして回答してください。</p>
+          </div>
+          <div class="note-item">
+            <p class="note-head">3. 理想の自分ではなく「今の自分」で答える</p>
+            <p class="note-body">こうなりたい、こうあるべきではなく、現時点での自分に正直に答えることが重要です。</p>
+          </div>
+          <div class="note-item">
+            <p class="note-head">4. 周囲からの評価ではなく「自分の感覚」で答える</p>
+            <p class="note-body">他人からどう見られているかではなく、自分が自然に感じていること・選びがちな行動を基準にしてください。</p>
+          </div>
+          <div class="note-item">
+            <p class="note-head">5. 深く考えすぎず、直感で答える</p>
+            <p class="note-body">考えすぎると社会性や思い込みが入りやすくなります。最初に感じた感覚を大切にしてください。</p>
+          </div>
+          <div class="note-item">
+            <p class="note-head">6. スペクトルテストの注意点</p>
+            <p class="note-body">ウェルスダイナミクスには「状態（スペクトル）」という概念があります。今の調子に関わらず、できるだけフラットに回答してください。理想の自分や過去の状態ではなく、直近1〜3ヶ月のご自身の状態を基準にすることで、より正確な結果が出ます。また、雇用されている方は、会社での立場ではなく、個人として回答してください。</p>
+          </div>
+        </div>
+        <p style="margin-top:8px;">このテストは一度で確定するものではなく、自分の特性を知るためのヒントです。セッションでは結果をもとに、具体的な活かし方まで落とし込んでいきます。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">セッション</p>
+        <p>セッションは90分です。時間の使い方はご希望に応じて調整可能です。事前にヒアリングシートをLINEでお送りさせていただきますので、可能な範囲でご記入ください。</p>
+        <p>ご希望がない場合は、以下を中心に進めていきます。</p>
+        <ul class="test-list">
+          <li>プロファイルの解説</li>
+          <li>スペクトルの解説</li>
+          <li>現状に合わせた強みの活かし方</li>
+        </ul>
+        <p style="margin-top:16px;">一方的な解説ではなく、これまでのご経験や現状も踏まえながら進めていきます。</p>
+        <p>延長をご希望の場合は、60分 3,000円にて承ります。</p>
+        <p>事前にしっかりご準備いただくことで、セッションの質が大きく変わります。ぜひご協力をお願いいたします。</p>
+        <p>当日お話できるのを楽しみにしております。</p>
+      </div>
+    </div>
+
+    <div class="contact-note">
+      <div class="wrap">
+        <p>状態に応じてカスタマイズします。<br>まずはLINEでお気軽にご相談ください。</p>
+        <p><strong>「相談」</strong></p>
+        <p>と送っていただければ大丈夫です。</p>
+        <p class="line-cta"><a href="https://lin.ee/ZYgB4IZ" class="line-link" target="_blank">LINEで相談する</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="index.html">Top</a>
+      <a href="home.html">Home</a>
+      <a href="wealth.html">Wealth</a>
+      <a href="seminar.html">Seminar</a>
+      <a href="business.html">Services</a>
+      <a href="story.html">Profile</a>
+      <a href="https://note.com/satoooru" target="_blank">Column</a>
+      <a href="connect.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <p class="footer-copy">© Satoru Kobayashi</p>
+  </footer>
+
+</body>
+</html>
