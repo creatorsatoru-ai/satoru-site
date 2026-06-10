@@ -20,14 +20,17 @@
     nav a { font-size: 13px; color: #555; line-height: 1; }
     nav a:hover, nav a.active { color: #111; text-decoration: underline; }
 
-    .page-hero { background: #0B1D35; color: #fff; padding: 90px 40px 70px; }
-    .page-hero .page-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; display: block; }
-    .page-hero h1 { font-size: 28px; line-height: 1.5; color: #fff; }
+    .page-hero { background: #0B1D35; color: #fff; padding: 80px 40px 80px; }
+    .page-hero h1 { font-size: 44px; line-height: 1.55; color: #fff; }
 
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
     .section { padding-bottom: 48px; }
 
-    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+    .section-label { display: block; background: #444; color: #fff; padding: 14px 40px; margin: 0 -40px 28px; font-size: 15px; font-weight: 700; }
+
+    .intro-section { padding: 52px 0 0; }
+    .intro-section p { font-size: 16px; line-height: 1.95; margin-bottom: 20px; color: #444; }
+    .intro-section p:last-child { margin-bottom: 0; }
 
     h2 { font-size: 17px; font-weight: 700; line-height: 1.5; margin-bottom: 12px; }
     h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; margin-top: 24px; }
@@ -39,6 +42,9 @@
     .check-list { border-top: 1px solid #e5e5e5; }
     .check-list li { padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-size: 14px; padding-left: 16px; position: relative; }
     .check-list li::before { content: "・"; position: absolute; left: 0; color: #999; }
+
+    .wd-square { padding: 0 0 48px; text-align: center; }
+    .wd-square img { width: 100%; max-width: 520px; display: inline-block; }
 
     .dynamics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #e5e5e5; border: 1px solid #e5e5e5; margin: 20px 0; }
     .dynamics-item { background: #fff; padding: 20px; }
@@ -53,6 +59,12 @@
     .spec-row:last-child { border-bottom: none; }
     .spec-key { min-width: 60px; color: #888; font-size: 12px; padding-top: 2px; }
 
+    .instructor-photo { max-width: 240px; margin: 0 auto 28px; }
+    .instructor-photo img { width: 100%; display: block; }
+    .instructor-name { font-size: 20px; font-weight: 700; margin-bottom: 16px; text-align: center; }
+    .instructor-bio p { font-size: 15px; line-height: 1.9; margin-bottom: 10px; }
+    .instructor-bio p:last-child { margin-bottom: 0; }
+
     .voice-item { padding: 20px 0; border-bottom: 1px solid #e5e5e5; }
     .voice-item:first-child { border-top: 1px solid #e5e5e5; }
     .voice-text { font-size: 14px; line-height: 1.9; margin-bottom: 8px; }
@@ -62,9 +74,6 @@
     .faq-item:first-child { border-top: 1px solid #e5e5e5; }
     .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
     .faq-a { font-size: 14px; color: #444; line-height: 1.8; }
-
-    .btn { display: inline-block; border: 2px solid #111; padding: 12px 28px; font-size: 14px; font-weight: 700; transition: background 0.15s, color 0.15s; }
-    .btn:hover { background: #111; color: #fff; text-decoration: none; }
 
     .contact-note { padding: 40px 0 64px; border-top: 1px solid #e5e5e5; }
     .contact-note p { font-size: 17px; color: #444; margin-bottom: 12px; text-align: center; }
@@ -77,14 +86,19 @@
     footer nav a:hover { color: #fff; text-decoration: none; }
     .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 16px; }
 
+    @media print {
+      header { position: static; }
+    }
+
     @media (max-width: 700px) {
       header { padding: 16px 20px; }
       nav { gap: 16px; }
       .wrap { padding: 0 20px; }
-      .page-hero { padding: 74px 20px 56px; }
-      .page-hero h1 { font-size: 22px; }
+      .page-hero { padding: 64px 20px 64px; }
+      .page-hero h1 { font-size: 32px; }
       .section-label { margin: 0 -20px 24px; padding: 14px 20px; }
       .dynamics-grid { grid-template-columns: 1fr; }
+      .instructor-photo { max-width: 200px; }
       footer { padding: 28px 20px; }
     }
   </style>
@@ -105,14 +119,20 @@
 
   <div class="page-hero">
     <div class="wrap">
-      <p class="page-label">Wealth Dynamics</p>
-      <h1>才能を活かしてフローに乗る</h1>
+      <h1>WEALTH<br>DYNAMICS</h1>
     </div>
   </div>
 
   <main>
 
-    <div class="section">
+    <div class="intro-section">
+      <div class="wrap">
+        <p>ウェルスダイナミクスとは、ロジャー・ハミルトンによって開発された「才能を成果につなげるためのフレームワーク」です。</p>
+        <p>単なる性格診断ではなく、どこで価値を発揮するのか、どの役割で機能するのかを整理するための考え方です。</p>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:40px;">
       <div class="wrap">
         <p class="section-label">こんな方に</p>
         <ul class="check-list">
@@ -127,11 +147,19 @@
 
     <div class="section">
       <div class="wrap">
-        <p class="section-label">ウェルスダイナミクスとは</p>
-        <p>ロジャー・ハミルトンによって開発された「才能を成果につなげるためのフレームワーク」です。単なる性格診断ではなく、どこで価値を発揮するのか、どの役割で機能するのか、どう動くと成果につながるのかを整理するための考え方です。</p>
-        <h3>なぜこの理論が必要か</h3>
-        <p>同じように努力しているのに、結果が出る人と出ない人がいます。この差は能力ではなく、「自分に合った動き方をしているかどうか」で生まれます。</p>
-        <p>人にはそれぞれ、アイデアから動くタイプ、人との関係から広げるタイプ、コツコツ積み上げるタイプ、分析して整えるタイプといった違いがあります。この違いを無視して動くと、頑張っているのに結果につながらない状態になります。</p>
+        <p class="section-label">なぜこの理論が必要か</p>
+        <p>多くの人は、努力が足りないから成果が出ないのではなく、</p>
+        <p>自分に合わないやり方を続けていることで、必要以上に苦労しています。</p>
+        <p>ウェルスダイナミクスは、才能の優劣を見るものではありません。</p>
+        <p>自分が自然に成果を出しやすい場所を知り、そこに力を集中させるための考え方です。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="wd-square">
+          <img src="images/wd-square.png" alt="ウェルスダイナミクス スクエア図">
+        </div>
       </div>
     </div>
 
@@ -160,38 +188,10 @@
 
     <div class="section">
       <div class="wrap">
-        <p class="section-label">活用できる場面</p>
-        <h3>起業・個人事業</h3>
-        <ul class="check-list" style="margin-bottom:8px;">
-          <li>自分に合ったビジネスの進め方が分かる</li>
-          <li>無理な営業や集客から抜けられる</li>
-          <li>強みを活かした収益の作り方が見える</li>
-        </ul>
-        <p style="font-size:13px;color:#777;margin-bottom:24px;">→「頑張る方向」が明確になる</p>
-        <h3>社員研修・人材育成</h3>
-        <ul class="check-list" style="margin-bottom:8px;">
-          <li>適材適所の配置ができる</li>
-          <li>個人の強みを活かした役割設計ができる</li>
-          <li>チーム内のミスマッチやストレスが減る</li>
-        </ul>
-        <p style="font-size:13px;color:#777;margin-bottom:24px;">→「組織全体の生産性」が上がる</p>
-        <h3>法人の成長・組織構築</h3>
-        <ul class="check-list" style="margin-bottom:8px;">
-          <li>経営者の強みを軸に戦略が組める</li>
-          <li>役割分担が明確になり、無駄が減る</li>
-          <li>チームとしての機能が最大化される</li>
-        </ul>
-        <p style="font-size:13px;color:#777;">→「個人の力」から「組織の力」へ変わる</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="wrap">
         <p class="section-label">サービス内容と料金</p>
         <div class="service-block">
           <div class="service-head"><h3>1. プロファイル・スペクトルセッション</h3></div>
           <div class="service-body">
-            <p style="margin-bottom:10px;">内容：</p>
             <ul class="check-list" style="margin-bottom:16px;">
               <li>プロファイルテスト</li>
               <li>スペクトルテスト</li>
@@ -216,11 +216,10 @@
           <div class="service-head"><h3>3. ウェルス集中講座（1DAY）</h3></div>
           <div class="service-body">
             <p>ウェルスダイナミクスを理解だけで終わらせず、実践レベルまで落とし込みたい方向け。</p>
-            <p style="margin-bottom:10px;">内容：タイプ理解 / スペクトル戦略 / 行動設計 / 習慣化</p>
             <div class="spec-row"><span class="spec-key">形式</span><span>Zoom</span></div>
             <div class="spec-row"><span class="spec-key">時間</span><span>10:00〜18:30</span></div>
             <div class="spec-row"><span class="spec-key">料金</span><span>一般：33,000円（税込）　会員：30,000円（税込）</span></div>
-            <p style="margin-top:12px;"><a href="seminar.html">→ 日程・詳細はセミナーページへ</a></p>
+            <p style="margin-top:12px;font-size:13px;color:#888;"><a href="seminar.html">日程・詳細はセミナーページへ</a></p>
           </div>
         </div>
       </div>
@@ -229,15 +228,16 @@
     <div class="section">
       <div class="wrap">
         <p class="section-label">講師プロフィール</p>
-        <h2>小林 悟（こばやし さとる）</h2>
-        <ul class="check-list">
-          <li>一般社団法人日本適性力学協会 認定アンバサダー</li>
-          <li>日本で最も多くのウェルスダイナミクス講師を育成してきた実績</li>
-          <li>10年以上にわたる実践と指導</li>
-          <li>企業研修から個人まで幅広い事例</li>
-          <li>国内最多クラスの有資格者育成実績</li>
-        </ul>
-        <p style="margin-top:16px;">私の役割は、あなたを分類することではなく、今のあなたにとってどこで力を使うべきかを一緒に整理することです。</p>
+        <div class="instructor-photo">
+          <img src="images/satoru.jpg" alt="小林悟">
+        </div>
+        <p class="instructor-name">SATORU KOBAYASHI</p>
+        <div class="instructor-bio">
+          <p>18歳でトラック運転手として社会に出る。</p>
+          <p>その後、三菱商事グループで営業、営業所長、本社営業企画、新規事業開発責任者を経験し22年間勤務。</p>
+          <p>40歳で独立。</p>
+          <p>現在はウェルスダイナミクスをはじめ、人が豊かになるための仕組みづくりに取り組んでいる。</p>
+        </div>
       </div>
     </div>
 
